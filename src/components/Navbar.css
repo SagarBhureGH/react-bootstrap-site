@@ -1,0 +1,19 @@
+/* Smooth collapse animation using max-height */
+.collapse-custom {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 350ms ease;
+}
+
+/* when expanded, allow full height (value large enough for menu) */
+.collapse-custom.show {
+  max-height: 500px;
+}
+
+/* Keep natural behavior at large screens */
+@media (min-width: 992px) {
+  .collapse-custom {
+    max-height: none !important;
+    overflow: visible;
+  }
+}
